@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📝 Enter Your Details</h1>
+  </header>
+
+  <main>
+    <form onsubmit="submitForm(event)">
+      <label>Full Name:</label>
+      <input type="text" required>
+
+      <label>Address:</label>
+      <textarea required></textarea>
+
+      <label>Email:</label>
+      <input type="email" required>
+
+      <label>Phone:</label>
+      <input type="tel" required>
+
+      <button type="submit">Confirm Order ✅</button>
+    </form>
+  </main>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      localStorage.removeItem('cart');
+      window.location.href = 'thankyou.html';
+    }
+  </script>
+</body>
+</html>
